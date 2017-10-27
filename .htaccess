@@ -1,0 +1,4 @@
+Options -Indexes
+<FilesMatch "\.(sqlite|xml|csv|txt|ini|sql|bat)$">
+Deny from all
+</FilesMatch>
