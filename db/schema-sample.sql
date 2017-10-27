@@ -31,7 +31,8 @@ USE `abc_company`;
 CREATE TABLE IF NOT EXISTS `permissions` (
   `perm_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `perm_desc` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`perm_id`)
+  PRIMARY KEY (`perm_id`),
+  UNIQUE KEY (`perm_desc`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=45 ;
 
 --
@@ -93,7 +94,8 @@ INSERT INTO `permissions` (`perm_id`, `perm_desc`) VALUES
 CREATE TABLE IF NOT EXISTS `roles` (
   `role_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `role_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`role_id`)
+  PRIMARY KEY (`role_id`),
+  UNIQUE KEY (`role_name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
@@ -118,7 +120,8 @@ CREATE TABLE IF NOT EXISTS `role_perm` (
   `role_id` int(10) unsigned NOT NULL,
   `perm_id` int(10) unsigned NOT NULL,
   KEY `role_id` (`role_id`),
-  KEY `perm_id` (`perm_id`)
+  KEY `perm_id` (`perm_id`),
+  UNIQUE KEY (`role_id`, `perm_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -331,7 +334,9 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` char(128) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
   `created_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`)
+  PRIMARY KEY (`user_id`),
+  UNIQUE KEY (`username`),
+  UNIQUE KEY (`email`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
@@ -352,7 +357,8 @@ CREATE TABLE IF NOT EXISTS `user_role` (
   `user_id` int(10) unsigned NOT NULL,
   `role_id` int(10) unsigned NOT NULL,
   KEY `user_id` (`user_id`),
-  KEY `role_id` (`role_id`)
+  KEY `role_id` (`role_id`),
+  UNIQUE KEY (`user_id`, `role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
