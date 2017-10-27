@@ -2,11 +2,11 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-### Overview
+## Overview
 
 Open Source web-based implementation of **Role Based Access Control** (RBAC) in PHP. The implementation is flexible to integrate into any existing PHP project.
 
-### Characteristics and Policies [1]
+## Characteristics and Policies [1]
 
 - within the RBAC framework, a **user** is a person, a **role** is a collection of job functions, and an **operation** represents a particular mode of access to a set of one or more protected RBAC objects; 
 
@@ -40,7 +40,7 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
     - the role is allowed to perform the operation; & 
     - the operation to access the object is authorised. 
 
-### Implementation
+## Implementation
 
 **Database**    Four database tables are created in to store role and permission information: the `roles` table stores a role ID and role name, the `permissions` table stores a permission ID and description, the `role_perm` table associates which permissions belong to which roles, and the `user_role` table associates which roles are assigned to which users.
 
@@ -48,7 +48,7 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
 
 **Password**    Passwords are stored using 128-bit SHA512 algorithm. The algorithm is considered computationally expensive to brute-force password (in the event your database is compromised).
 
-### How to Run Project
+## How to Run Project
 
 **1.**   Create empty database tables using `db/schema.sql` then insert values in `roles`, `permissions`, `role_perm` and `user_role` tables. Alternatively, sample working database tables are also available `db/schema-sample.sql`. 
 
@@ -62,7 +62,7 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
 
 [1]: A. Rhodes and W. Caelli, "A Review Paper - Role Based Access Control", pp. 3-5.
 
-### License
+## License
 
 ```The MIT License (MIT)
    
