@@ -1,5 +1,7 @@
 # Implementation of Role Based Access Control in PHP
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
 ### Overview
 
 Open Source web-based implementation of **Role Based Access Control** (RBAC) in PHP. The implementation is flexible to integrate into any existing PHP project.
