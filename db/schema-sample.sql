@@ -17,10 +17,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `abc_company`
+-- Database: `role_based_access_control`
 --
-CREATE DATABASE IF NOT EXISTS `abc_company` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `abc_company`;
+CREATE DATABASE IF NOT EXISTS `role_based_access_control` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `role_based_access_control`;
 
 -- --------------------------------------------------------
 
