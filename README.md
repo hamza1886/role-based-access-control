@@ -44,7 +44,7 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
 
 **Database**    Four database tables are created in to store role and permission information: the `roles` table stores a role ID and role name, the `permissions` table stores a permission ID and description, the `role_perm` table associates which permissions belong to which roles, and the `user_role` table associates which roles are assigned to which users.
 
-**PHP Classes**   `Role` class is to return a role object that is populated with each roles corresponding permissions. `PrivilegedUser` class extends existing User class (reuse existing code logic for managing users) and then add some additional methods specifically working with privileges. `Permission` class is to add and delete permissions. `Database` class to connect with database.
+**Model Classes**   `Role` class is to return a role object that is populated with each roles corresponding permissions. `PrivilegedUser` class extends existing User class (reuse existing code logic for managing users) and then add some additional methods specifically working with privileges. `Permission` class is to add and delete permissions. `Database` class to connect with database.
 
 **Password**    Passwords are stored using 128-bit SHA512 algorithm. The algorithm is considered computationally expensive to brute-force password (in the event your database is compromised).
 
