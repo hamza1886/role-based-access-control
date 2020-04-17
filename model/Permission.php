@@ -5,7 +5,7 @@ class Permission
 {
 
     // check if permission already exist
-    private static function isPerm($perm_desc)
+    private static function hasPerm($perm_desc)
     {
         $db = new Database();
 
@@ -24,7 +24,7 @@ class Permission
     // insert a new permission
     public static function insertPerm($perm_desc)
     {
-        if (!self::isPerm($perm_desc)) {
+        if (!self::hasPerm($perm_desc)) {
             $db = new Database();
 
             $sql = "INSERT INTO permissions (perm_desc) VALUES (:perm_desc)";

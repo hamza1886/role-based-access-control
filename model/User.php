@@ -23,7 +23,6 @@ class User
         $result = $sth->fetchAll();
 
         if (!empty($result) && $result[0]["count"] === 0) {
-
             $sql2 = "INSERT INTO users (username, password, email) VALUES (:username, SHA2(:password, 512), :email)";
             $sth2 = $db->conn->prepare($sql2);
             $sth2->execute(array(":username" => $username, ":password" => $password, ":email" => $email));

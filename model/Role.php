@@ -35,7 +35,7 @@ class Role
     }
 
     // check if role already exist
-    private static function isRole($role_name)
+    private static function hasRole($role_name)
     {
         $db = new Database();
 
@@ -54,7 +54,7 @@ class Role
     // insert a new role
     public static function insertRole($role_name)
     {
-        if (!self::isRole($role_name)) {
+        if (!self::hasRole($role_name)) {
             $db = new Database();
 
             $sql = "INSERT INTO roles (role_name) VALUES (:role_name)";
