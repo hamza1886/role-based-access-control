@@ -91,5 +91,6 @@ if ($u->hasPrivilege('add_user') && $u->hasPrivilege('add_role')) {
 </div>
 
 <?php require_once 'script.php'; ?>
+<?php require_once 'footer.php'; ?>
 </body>
 </html>
