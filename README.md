@@ -42,7 +42,7 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
 
 ## Implementation
 
-**Database**    Four database tables are created in to store role and permission information: the `roles` table stores a role ID and role name, the `permissions` table stores a permission ID and description, the `role_perm` table associates which permissions belong to which roles, and the `user_role` table associates which roles are assigned to which users.
+**Database**    Four database tables are created to store role and permission information: the `roles` table stores a role ID and role name, the `permissions` table stores a permission ID and description, the `role_perm` table associates which permissions belong to which roles, and the `user_role` table associates which roles are assigned to which users.
 
 **Model Classes**   `Role` class is to return a role object that is populated with each roles corresponding permissions. `PrivilegedUser` class extends existing User class (reuse existing code logic for managing users) and then add some additional methods specifically working with privileges. `Permission` class is to add and delete permissions. `Database` class to connect with database.
 
