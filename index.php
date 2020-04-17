@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Home | Company</title>
     <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
@@ -12,7 +14,7 @@ require_once 'model/Role.php';
 require_once 'model/Permission.php';
 require_once 'model/PrivilegedUser.php';
 
-if (session_status() == PHP_SESSION_NONE) {
+if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
@@ -24,7 +26,7 @@ if (!$u) {
 
 if (!$u->hasPrivilege('view_role')) {
     header("Location: index.php", true, 403);
-    die ("<h2>403 Forbidden</h2><p>You are not allowed here. Please contact administrator <a href='admin@company.com'>admin@company.com</a>.</p>");
+    die ("<h2>403 Forbidden</h2><p>You are not allowed here. Please contact administrator <a href='mailto:admin@company.com'>admin@company.com</a>.</p>");
 }
 
 require_once 'menu.php';
@@ -88,6 +90,6 @@ if ($u->hasPrivilege('add_user') && $u->hasPrivilege('add_role')) {
     <pre><?php print_r($u); ?></pre>
 </div>
 
-<?php require_once 'footer.php'; ?>
+<?php require_once 'script.php'; ?>
 </body>
 </html>
