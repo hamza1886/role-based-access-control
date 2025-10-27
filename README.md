@@ -6,7 +6,7 @@
 
 Open Source web-based implementation of **Role Based Access Control** (RBAC) in PHP. The implementation is flexible to integrate into any existing PHP project.
 
-## Characteristics and Policies [1]
+## Characteristics and Policies [1][2]
 
 - within the RBAC framework, a **user** is a person, a **role** is a collection of job functions, and an **operation** represents a particular mode of access to a set of one or more protected RBAC objects; 
 
@@ -60,7 +60,8 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
 
 --------------------------------------------------------------------
 
-[1]: A. Rhodes and W. Caelli, "A Review Paper - Role Based Access Control", pp. 3-5.
+[1]: A. Rhodes and W. Caelli, "A Review Paper - Role Based Access Control", pp. 3-5. Information Security Research Centre, 2000. [link](https://www.researchgate.net/publication/228864932_A_Review_Paper_Role_Based_Access_Control)
+[2]: DF Ferraiolo, JA Cugini, DR Kuhn, "Role-Based Access Control (RBAC): Features andMotivations", 11th Annual Computer Security Applications Proceedings, December 1995 [link](ttps://www.cs.unibo.it/~montreso/master/materiale/ac/rbac.pdf)
 
 ## License
 
