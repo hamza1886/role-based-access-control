@@ -64,6 +64,16 @@ Open Source web-based implementation of **Role Based Access Control** (RBAC) in 
 
 [2]: DF Ferraiolo, JA Cugini, DR Kuhn, "Role-Based Access Control (RBAC): Features andMotivations", 11th Annual Computer Security Applications Proceedings, December 1995 [link](https://www.cs.unibo.it/~montreso/master/materiale/ac/rbac.pdf)
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=hamza1886%2Frole-based-access-control&type=date&logscale=&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/image?repos=hamza1886/role-based-access-control&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/image?repos=hamza1886/role-based-access-control&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/image?repos=hamza1886/role-based-access-control&type=date&legend=top-left" />
+ </picture>
+</a>
+
 ## License
 
 ```The MIT License (MIT)
